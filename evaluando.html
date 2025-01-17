@@ -1,0 +1,22 @@
+<h1>Te estamos evaluando</h1>
+
+<p>
+  Espera <span id="secondsLeft">60</span> segundos.
+</p>
+
+<script>
+  let secondsLeft = 60;
+  document.addEventListener("DOMContentLoaded", function() {
+    setInterval(function () {
+      secondsLeft--;
+      console.log(document.getElementById("secondsLeft"), secondsLeft);
+      document.getElementById("secondsLeft").innerHTML = secondsLeft.toString();
+    }, 1000)
+    
+    setInterval(function () {
+    	Array.from(document.getElementsByClassName("toEditor")).forEach(function (elem) {
+          elem.style.display = "none";
+      });
+    }, 1000)
+  });
+</script>
